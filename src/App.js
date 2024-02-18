@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import gsap from "gsap";
+import Header from "./componants/Header";
+import Main from "./componants/Main";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex gap-5 flex-col   overflow-hidden    min-h-screen bg-[#141416]">
+      <div className="  flex flex-col gap-5 w-[90%]  mx-auto ">
+        <Header />
+        <Main />
+
+      </div>
     </div>
   );
 }
