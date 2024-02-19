@@ -1,36 +1,29 @@
-import { Link } from "react-router-dom";
-import linkedin from "../assets/linkedin-svgrepo-com.svg";
-import github from "../assets/github-color-svgrepo-com.svg";
-import facebook from "../assets/facebook-color-svgrepo-com.svg";
 import About from "./About";
 import Hero from "./Hero";
 import { Fade } from "react-awesome-reveal";
-import Moving from "./Moving";
-import ReactPageScroller, { SectionContainer } from "react-page-scroller";
-import React, { useState } from "react";
-import anime from "animejs";
 import Project from "./Project";
-const Main = () => {
-  const [PageNumber, setPageNumber] = useState(0);
+import { FullpageContainer, FullpageSection } from "@shinyongjun/react-fullpage";
+import "@shinyongjun/react-fullpage/css";
+const Main = ({ activeIndex, setActiveIndex }) => {
   return (
     <Fade>
-      <div className="md:text-3xl  mainParent     relative flex flex-col gap-5  text-white">
-        <Moving setPageNumber={setPageNumber} PageNumber={PageNumber} />
-        <React.Fragment>
-          <ReactPageScroller
-            customPageNumber={PageNumber}
-            onBeforePageScroll={(page) => {
-              setPageNumber(page);
-            }}
-            containerWidth={"100%"}
-          >
-            <Hero setPageNumber={setPageNumber} />
-            <SectionContainer height={150}>
-              <About />
-            </SectionContainer>
-            <Project />
-          </ReactPageScroller>
-        </React.Fragment>
+      <div className="md:text-3xl  mainParent     relative flex flex-col gap-[200px]  text-white">
+        <FullpageContainer
+          transitionDuration={2000}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+        >
+          <FullpageSection name=" first">
+            <Hero />
+          </FullpageSection>
+          <FullpageSection isAutoHeight={true} name="three">
+            <About />
+          </FullpageSection>
+
+          <FullpageSection name="second">
+            <Project />{" "}
+          </FullpageSection>
+        </FullpageContainer>
       </div>
     </Fade>
   );

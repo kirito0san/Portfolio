@@ -33,15 +33,15 @@ const Hero = ({ setPageNumber }) => {
     <div
       id="home"
       ref={ref}
-      className="article relative  md:flex-row md:items-center md:min-h-screen"
+      className="article w-full pt-[80px] relative  md:flex-row md:items-center md:min-h-screen"
     >
       <img src={hero} alt="" />
 
-      <div className={" parentHero !h-1/4 z-10 flex items-center justify-center  "}>
+      <div className={" parentHero  z-10 flex items-center justify-center  "}>
         <SVGComponent />
       </div>
-      <div className="homeParagraph z-20  md:-order-1 cursor-default flex flex-col gap-5  md:w-[60%]">
-        <p className=" text-4xl md:text-5xl  font-bold">
+      <div className="homeParagraph z-20  pt-5 md:-order-1 cursor-default flex flex-col gap-5  md:w-[60%]">
+        <p className=" text-[33px] md:text-5xl  font-bold">
           <span>F</span>
           <span>r</span>
           <span>o</span>

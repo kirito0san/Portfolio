@@ -136,7 +136,7 @@ html {
   }
 }
 .headerNav {
-  @apply absolute top-1/2 z-50 -translate-y-1/2 flex-col right-[-5px] gap-3  text-xs  flex items-center justify-center;
+  @apply absolute top-[16%] z-50 -translate-y-1/2 flex-col right-[20px] gap-5  text-xs  flex items-center justify-center;
 }
 .headerNav button {
   @apply block  border-2 transition-all  w-5 h-5   rounded-full;
@@ -213,3 +213,77 @@ html {
 /* hero */
 
 /* main */
+.react-fullpage__parents {
+  @apply !h-auto;
+}
+.react-fullpage__section {
+  @apply !h-screen;
+}
+
+.inter input {
+  @apply bg-neutral-400 w-full rounded-md p-4 outline-none;
+}
+
+.card:hover > div {
+  @apply -top-[0];
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px dotted #fff;
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted #ff3d00;
+  border-style: solid solid dotted;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.github_linkdin > p {
+  background-image: url(https://i.gifer.com/origin/43/43a442f88898b59699fb7e30dc31e5eb_w200.webp);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  filter: invert(30) brightness(2.2);
+  -webkit-filter: invert(30) brightness(2.2);
+}
+.github_linkdin {
+  @apply px-3 py-2 h-max flex justify-center items-center bg-[#2e2c2c] rounded-full;
+}

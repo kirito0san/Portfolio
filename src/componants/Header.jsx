@@ -1,7 +1,8 @@
 import { useRef } from "react";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ setActiveIndex }) => {
   const header = useRef(null);
   window.onscroll = () => {
     if (window.scrollY == 0) {
@@ -34,11 +35,8 @@ const Header = () => {
         ></path>
       </svg>
 
-      <div className="">
-        <a
-          className="btn transition-all hidden md:flex hover:bg-white hover:text-black  duration-700  border px-2 p-1 "
-          href="#about"
-        >
+      <button className=" ">
+        <div className="btn transition-all hidden md:flex hover:bg-white hover:text-black  duration-700  border px-2 p-1 ">
           <p>hit me up</p>
           <div id="container-stars">
             <div id="stars" />
@@ -47,8 +45,8 @@ const Header = () => {
             <div className="circle" />
             <div className="circle" />
           </div>
-        </a>
-      </div>
+        </div>
+      </button>
     </div>
   );
 };

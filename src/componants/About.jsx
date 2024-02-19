@@ -35,7 +35,7 @@ const About = () => {
     <div
       id="about"
       ref={ref}
-      className="w-full about  md:h-screen  flex flex-col md:flex-row gap-7 md:items-center  justify-center  "
+      className="w-full about pt-[100px]   md:h-screen  flex flex-col md:flex-row gap-7 md:items-center   "
     >
       <div className="flex flex-col md:flex-row gap-2">
         <div className="article md:w-1/2  aboutMe cursor-default text-4xl md:text-5xl font-bold">

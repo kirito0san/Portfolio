@@ -1,21 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-const Moving = ({ setPageNumber, PageNumber }) => {
+const Moving = ({ activeIndex, setActiveIndex }) => {
   const handelclick = (e, i) => {
     document.querySelectorAll(".headerNav button").forEach((el) => {
       el.classList.remove(`active`);
     });
-    setPageNumber(i);
+    setActiveIndex(i);
     e.target.classList.add(`active`);
   };
   useEffect(() => {
     document.querySelectorAll(".headerNav button").forEach((el, ii) => {
       el.classList.remove(`active`);
-      if (ii == PageNumber) {
+      if (ii == activeIndex) {
         el.classList.add(`active`);
       }
     });
-  }, [PageNumber]);
+  }, [activeIndex]);
   return (
     <nav className="headerNav">
       <button
