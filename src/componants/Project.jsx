@@ -36,16 +36,14 @@ const Project = () => {
           {project &&
             project.map((item) => {
               return (
-                <Fade>
-                  <div key={item._id}>
-                    <Card
-                      name={item.name}
-                      livelink={item.live}
-                      github={item.github}
-                      technologies={item.Techs}
-                      img={item.preview}
-                    />
-                  </div>
+                <Fade key={item._id}>
+                  <Card
+                    name={item.name}
+                    livelink={item.live}
+                    github={item.github}
+                    technologies={item.Techs}
+                    img={item.preview}
+                  />
                 </Fade>
               );
             })}
