@@ -1,9 +1,13 @@
-import { useRef } from "react";
+import anime from "animejs";
+import { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import github from "../assets/iconmonstr-github-3.svg";
+import linkedin from "../assets/iconmonstr-linkedin-3.svg";
 const Header = ({ setActiveIndex }) => {
   const header = useRef(null);
+  const contarctmove = useRef(null);
+  const [contact, setcontact] = useState(false);
   window.onscroll = () => {
     if (window.scrollY == 0) {
       header.current.classList.remove("bg-[#3d3d49]");
@@ -11,6 +15,12 @@ const Header = ({ setActiveIndex }) => {
       header.current.classList.add("bg-[#3d3d49]");
     }
   };
+
+  const handelclick = () => {
+    contarctmove.current.classList.toggle("activemove");
+    setcontact(!contact);
+  };
+
   return (
     <div
       ref={header}
@@ -36,7 +46,12 @@ const Header = ({ setActiveIndex }) => {
       </svg>
 
       <button className=" ">
-        <div className="btn transition-all hidden md:flex hover:bg-white hover:text-black  duration-700  border px-2 p-1 ">
+        <div
+          onClick={() => {
+            handelclick();
+          }}
+          className="btn transition-all  md:flex hover:bg-white hover:text-black  duration-700  border px-2 p-1 "
+        >
           <p>hit me up</p>
           <div id="container-stars">
             <div id="stars" />
@@ -45,6 +60,22 @@ const Header = ({ setActiveIndex }) => {
             <div className="circle" />
             <div className="circle" />
           </div>
+        </div>
+        <div
+          ref={contarctmove}
+          className="contact activemove transition-all right-2 top-28 fixed flex flex-col gap-5 bg-white  justify-around p-2 rounded-lg z-30 "
+        >
+          <a href="https://github.com/kirito0san" target="_blank" rel="noreferrer">
+            <img className="w-10 h-10" src={github} alt="" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ahmed-fathy-05114a257/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {" "}
+            <img className="w-10 h-10" src={linkedin} alt="" />
+          </a>
         </div>
       </button>
     </div>

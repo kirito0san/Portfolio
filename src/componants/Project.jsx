@@ -74,7 +74,8 @@ const Project = () => {
             })}
           {Loading && (
             <div className="w-full flex justify-center">
-              <span class="loader"></span>
+              <p>this progress may take some time so please wait ...</p>
+              <span className="loader"></span>
             </div>
           )}
         </div>
