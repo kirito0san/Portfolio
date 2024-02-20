@@ -2,34 +2,9 @@ import { useInView } from "react-intersection-observer";
 import anime from "animejs";
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import { Fade } from "react-awesome-reveal";
 
 const Project = () => {
-  // const [ref, inView] = useInView({
-  //   /* Optional options */
-  //   threshold: 0.1,
-  // });
-  //   useEffect(() => {
-  //     if (inView) {
-  //       anime({
-  //         targets: [".aboutMe"],
-  //         translateX: [-1000, 0],
-  //         easing: "easeInOutQuad",
-  //         duration: 1000,
-  //       });
-  //       anime({
-  //         targets: [".aboutParagraph"],
-  //         translateX: [-1000, 0],
-  //         easing: "easeInOutQuad",
-  //         duration: 1000,
-  //       });
-  //       anime({
-  //         targets: [".Skills"],
-  //         translateX: [1000, 0],
-  //         easing: "easeInOutQuad",
-  //         duration: 1000,
-  //       });
-  //     }
-  //   }, [inView]);
   const [project, setproject] = useState([]);
   const [Loading, setLoading] = useState(true);
   useEffect(() => {
@@ -61,15 +36,17 @@ const Project = () => {
           {project &&
             project.map((item) => {
               return (
-                <div key={item._id}>
-                  <Card
-                    name={item.name}
-                    livelink={item.live}
-                    github={item.github}
-                    technologies={item.Techs}
-                    img={item.preview}
-                  />
-                </div>
+                <Fade>
+                  <div key={item._id}>
+                    <Card
+                      name={item.name}
+                      livelink={item.live}
+                      github={item.github}
+                      technologies={item.Techs}
+                      img={item.preview}
+                    />
+                  </div>
+                </Fade>
               );
             })}
           {Loading && (

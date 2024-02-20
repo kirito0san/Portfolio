@@ -1,24 +1,12 @@
-import anime from "animejs";
-import { useRef, useState } from "react";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useRef } from "react";
 import github from "../assets/iconmonstr-github-3.svg";
 import linkedin from "../assets/iconmonstr-linkedin-3.svg";
 const Header = ({ setActiveIndex }) => {
   const header = useRef(null);
   const contarctmove = useRef(null);
-  const [contact, setcontact] = useState(false);
-  window.onscroll = () => {
-    if (window.scrollY == 0) {
-      header.current.classList.remove("bg-[#3d3d49]");
-    } else {
-      header.current.classList.add("bg-[#3d3d49]");
-    }
-  };
 
   const handelclick = () => {
     contarctmove.current.classList.toggle("activemove");
-    setcontact(!contact);
   };
 
   return (
