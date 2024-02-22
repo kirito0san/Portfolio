@@ -48,7 +48,7 @@ const Project = () => {
               );
             })}
           {Loading && (
-            <div className="w-full flex justify-center flex-col gap-10">
+            <div className="w-full flex justify-center items-center flex-col gap-10">
               <p>this progress may take some time so please wait ...</p>
               <span className="loader"></span>
             </div>
