@@ -14,7 +14,6 @@ function App() {
       <Moving setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
       <div className="  flex flex-col gap-5 !w-[90%]  !mx-auto ">
         <Header />
-
         <Main setActiveIndex={setActiveIndex} activeIndex={activeIndex} />
       </div>
     </div>

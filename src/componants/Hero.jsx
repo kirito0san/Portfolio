@@ -35,7 +35,10 @@ const Hero = ({ setPageNumber }) => {
       ref={ref}
       className="article w-full pt-[80px] relative  md:flex-row md:items-center md:min-h-screen"
     >
-      <img src={hero} alt="" />
+      <span className="object-cover ">
+        {" "}
+        <img src={hero} alt="hero" />
+      </span>
 
       <div className={" parentHero  z-10 flex items-center justify-center  "}>
         <SVGComponent />

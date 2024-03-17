@@ -9,7 +9,7 @@ const Moving = ({ activeIndex, setActiveIndex }) => {
     e.target.classList.add(`active`);
   };
   useEffect(() => {
-    document.querySelectorAll(".headerNav button").forEach((el, ii) => {
+    document.querySelectorAll(".headerNav p").forEach((el, ii) => {
       el.classList.remove(`active`);
       if (ii == activeIndex) {
         el.classList.add(`active`);
@@ -18,14 +18,14 @@ const Moving = ({ activeIndex, setActiveIndex }) => {
   }, [activeIndex]);
   return (
     <nav className="headerNav">
-      <button
+      <p
         className="active"
         onClick={(e) => {
           handelclick(e, 0);
         }}
-      ></button>
-      <button onClick={(e) => handelclick(e, 1)}></button>
-      <button onClick={(e) => handelclick(e, 2)}></button>
+      ></p>
+      <p onClick={(e) => handelclick(e, 1)}></p>
+      <p onClick={(e) => handelclick(e, 2)}></p>
     </nav>
   );
 };
