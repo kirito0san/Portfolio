@@ -54,13 +54,13 @@ const Header = ({ setActiveIndex }) => {
           ref={contarctmove}
           className="fixed z-30 flex flex-col justify-around gap-5 p-2 transition-all bg-white rounded-lg contact activemove right-2 top-28 "
         >
-          <a href="https://github.com/kirito0san" target="_blank" rel="noreferrer">
+          <a href="https://github.com/kirito0san" target="_blank" rel="noreferrer github">
             <img className="w-10 h-10" src={github} alt="" />
           </a>
           <a
             href="https://www.linkedin.com/in/ahmed-fathy-05114a257/"
             target="_blank"
-            rel="noreferrer"
+            rel="linkedin noreferrer"
           >
             {" "}
             <img className="w-10 h-10" src={linkedin} alt="" />
