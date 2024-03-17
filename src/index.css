@@ -17,7 +17,7 @@ html {
 }
 
 .btn p {
-  @apply z-[2] font-semibold tracking-[5px] text-white;
+  @apply z-[2] font-semibold tracking-[5px]  text-white;
   text-shadow: 0 0 4px white;
 }
 
@@ -139,7 +139,7 @@ html {
   @apply absolute top-[16%] z-50 -translate-y-1/2 flex-col right-[20px] gap-5  text-xs  flex items-center justify-center;
 }
 .headerNav p {
-  @apply block w-5 h-5 transition-all border-2 rounded-full;
+  @apply block w-5 h-5 transition-all border-2 rounded-full cursor-pointer;
 }
 .active {
   @apply border-[rgba(251,146,60,1)] scale-125;

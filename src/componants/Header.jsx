@@ -33,14 +33,15 @@ const Header = ({ setActiveIndex }) => {
         ></path>
       </svg>
 
-      <button className=" ">
+      <button>
         <div
           onClick={() => {
             handelclick();
           }}
-          className="btn transition-all  md:flex hover:bg-white hover:text-black  duration-700  border px-2 p-1 "
+          className="!w-[150px] p-1 px-2 transition-all duration-700 border btn md:flex hover:bg-white hover:text-black "
         >
-          <p>hit me up</p>
+          {" "}
+          <p className="object-cover ">hit me up</p>
           <div id="container-stars">
             <div id="stars" />
           </div>
@@ -51,7 +52,7 @@ const Header = ({ setActiveIndex }) => {
         </div>
         <div
           ref={contarctmove}
-          className="contact activemove transition-all right-2 top-28 fixed flex flex-col gap-5 bg-white  justify-around p-2 rounded-lg z-30 "
+          className="fixed z-30 flex flex-col justify-around gap-5 p-2 transition-all bg-white rounded-lg contact activemove right-2 top-28 "
         >
           <a href="https://github.com/kirito0san" target="_blank" rel="noreferrer">
             <img className="w-10 h-10" src={github} alt="" />
