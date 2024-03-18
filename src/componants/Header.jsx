@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import github from "../assets/iconmonstr-github-3.svg";
 import linkedin from "../assets/iconmonstr-linkedin-3.svg";
+import { Link } from "react-router-dom";
+
 const Header = ({ setActiveIndex }) => {
   const header = useRef(null);
   const contarctmove = useRef(null);
@@ -45,26 +47,27 @@ const Header = ({ setActiveIndex }) => {
           <div id="container-stars">
             <div id="stars" />
           </div>
-          <div id="glow">
-            <div className="circle" />
-            <div className="circle" />
-          </div>
         </div>
         <div
           ref={contarctmove}
           className="fixed z-30 flex flex-col justify-around gap-5 p-2 transition-all bg-white rounded-lg contact activemove right-2 top-28 "
         >
-          <a href="https://github.com/kirito0san" target="_blank" rel="noreferrer github">
-            <img className="w-10 h-10" src={github} alt="" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ahmed-fathy-05114a257/"
+          <Link
+            aria-label="github"
+            to="https://github.com/kirito0san"
             target="_blank"
+            rel="noreferrer github"
+          >
+            <img className="w-10 h-10" src={github} alt="" />
+          </Link>
+          <Link
+            to="https://www.linkedin.com/in/ahmed-fathy-05114a257/"
+            target="_blank"
+            aria-label="linkedin"
             rel="linkedin noreferrer"
           >
-            {" "}
             <img className="w-10 h-10" src={linkedin} alt="" />
-          </a>
+          </Link>
         </div>
       </button>
     </div>
